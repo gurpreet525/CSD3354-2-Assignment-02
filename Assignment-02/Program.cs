@@ -12,46 +12,31 @@ namespace c0712759
 {
     namespace DelegatesAndEvents
     {
-
+        public class Program
+        {
+            public static void Main()
+            {
+                DelegateExercises delegateExercises = new DelegateExercises();
+                delegateExercises.Method3();
+            }
+        }
+    }
         public class DelegateExercises
         {
-            public delegate int MyDelegate(int intValue);
+            public delegate int MyDelegate();
 
-            public int Method1(int intMethod1)
+            void Method1()
             {
-                return intMethod1 * 2;
-            }
-
-            public int Method2(int intMethod2)
-            {
-                return intMethod2 * 10;
+                System.Console.WriteLine("MyDelegate");
             }
 
             public void Method3()
             {
                 MyDelegate myDelegate = new MyDelegate(Method1);
-                int result1 = myDelegate(10);
-                System.Console.WriteLine(result1);
-                myDelegate = new MyDelegate(Method2);
-                int result2 = myDelegate(10);
-                System.Console.WriteLine(result2);
+                myDelegate();
             }
         }
-
     }
 
-    public class Program
-    {
-        public static void Main()
-        {
-            DelegateExercises delegateExercises = new DelegateExercises();
-            delegateExercises.Method3();
-            Console.ReadLine();
 
-        }
-    }
-}
-    
-        
-    
 
