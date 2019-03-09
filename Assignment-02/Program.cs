@@ -17,6 +17,7 @@ namespace c0712759
             DelegateExercises delegateExercises = new DelegateExercises();
             delegateExercises.Method2();
 
+
         }
     }
 }
@@ -33,7 +34,7 @@ public class DelegateExercises
     public void Method2()
     {
         MyDelegate myDelegate = new MyDelegate(Method1);
-        myDelegate();
+        myDelegate(50);
     }
 
 }
