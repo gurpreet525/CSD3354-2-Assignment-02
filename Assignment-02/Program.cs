@@ -22,7 +22,7 @@ namespace c0712759
     }
 }
 
-//
+
 public class DelegateExercises
 {
     public delegate void MyDelegate();
