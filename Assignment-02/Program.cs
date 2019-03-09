@@ -10,37 +10,14 @@ using System.Threading.Tasks;
 
 namespace c0712759
 {
-    namespace DelegatesAndEvents
+    public delegate void MyDelegate();
+    
+    public class DelegateExercises
     {
-        public class Program
+        void Method3()
         {
-            public static void Main()
-            {
-                DelegateExercises delegateExercises = new DelegateExercises();
-                delegateExercises.Method3();
-                Console.ReadLine();
-            }
+            System.Console.WriteLine(MyDelegate.ToString());
         }
     }
+}
 
-        public delegate void MyDelegate();
-
-        public class DelegateExercises
-        {
-            void Method1()
-            {
-                System.Console.WriteLine("Method1");
-
-
-            }
-
-            public void Method3()
-            {
-                MyDelegate myDelegate = new MyDelegate(Method1);
-                myDelegate();
-                System.Console.WriteLine(myDelegate.ToString());
-            }
-        }
-
-
-    }
